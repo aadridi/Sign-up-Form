@@ -1,5 +1,110 @@
+/* Police 1 : Norse-bold (logo) */
+@font-face {
+	font-family: 'Norse';
+	src: url('../fonts/Norse-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Police : Haffer */
+/* Regular */
+@font-face {
+	font-family: 'Haffer-Regular';
+	src: url('../fonts/Haffer/Haffer/Haffer-TRIAL-Medium.woff2') format('woff2');
+	font-style: normal;
+}
+
+/* Bold */
+@font-face {
+	font-family: 'Haffer-Bold';
+	src: url('../fonts/Haffer/Haffer/Haffer-TRIAL-Bold.woff2') format('woff2');
+	font-style: bold;
+}
+
+/* Italic */
+@font-face {
+	font-family: 'Haffer-Italic';
+	src: url('../fonts/Haffer/Haffer/Haffer-TRIAL-MediumItalic.woff2') format('woff2');
+	font-style: italic;
+}
+
+/* Semi-Bold */
+@font-face {
+	font-family: 'Haffer-Semi-Bold';
+	src: url('../fonts/Haffer/Haffer/Haffer-TRIAL-SemiBold.woff2') format('woff2');
+}
+
+:root {
+	--button-bg: #596d48;
+	--input-border: #e5e7eb;
+	--font-main-regular: 'Haffer-Regular', sans-serif;
+	--font-main-bold: 'Haffer-Bold', sans-serif;
+	--font-main-italic: 'Haffer-Italic', sans-serif;
+	--font-main-semi-bold: 'Haffer-Semi-Bold', sans-serif;
+	--font-logo: 'Norse', sans-serif;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+aside {
+	background-image: url('../img/bg-aside.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+header {
+	font-family: var(--font-main-regular);
+}
+
+.wrapper {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+}
+
+aside {
+	width: 30vw;
+	display: flex;
+	justify-content: center;
+}
+
+.logo-wrapper {
+	display: flex;
+	height: 130px;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0px;
+	margin-top: 30vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo-wrapper img {
+	max-width: 90%;
+	max-height: 90%;
+	height: auto;
+	width: auto;
+}
+
+.logo-wrapper h1 {
+	color: white;
+	font-family: var(--font-logo);
+	font-size: 5rem;
+}
+
+aside p {
+	color: white;
+	font-family: var(--font-main-regular);
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 15px;
+}
+
+aside p a {
+	color: white;
 }
