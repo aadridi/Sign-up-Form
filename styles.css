@@ -50,6 +50,7 @@
 	box-sizing: border-box;
 }
 
+/* Aside part */
 aside {
 	background-image: url('../img/bg-aside.jpg');
 	background-repeat: no-repeat;
@@ -58,7 +59,6 @@ aside {
 }
 
 header {
-	font-family: var(--font-main-regular);
 }
 
 .wrapper {
@@ -79,9 +79,9 @@ aside {
 	justify-content: center;
 	align-items: center;
 	padding: 10px 0px;
-	margin-top: 30vh;
+	margin-top: 25vh;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .logo-wrapper img {
@@ -107,4 +107,145 @@ aside p {
 
 aside p a {
 	color: white;
+}
+
+/* Right part */
+/* Header */
+main {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	background-color: #f9fafb;
+}
+
+header,
+footer {
+	height: calc(100vh / 4);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	margin-top: 100px;
+	font-family: var(--font-main-semi-bold);
+	margin-left: 4rem;
+	gap: 50px;
+}
+
+header em {
+	margin: 0.1em;
+}
+
+header p {
+	font-size: 1.5rem;
+	max-width: 60ch;
+}
+
+/* Footer */
+footer div {
+	display: flex;
+	flex-direction: column;
+	margin-left: 4rem;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+	gap: 20px;
+	width: fit-content;
+}
+
+button {
+	background-color: #596d48;
+	color: white;
+	text-align: center;
+	padding: 1em 4em;
+	font-family: var(--font-main-semi-bold);
+	font-size: 1rem;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px;
+}
+
+footer div p {
+	font-family: var(--font-main-regular);
+}
+
+footer div p a {
+	color: #596d48;
+	text-decoration: none;
+}
+
+/* Form */
+form {
+	background-color: white;
+	min-height: calc(100vh / 3);
+	box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+	padding-bottom: 50px;
+}
+
+fieldset {
+	margin-left: 4rem;
+	border: none;
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.fieldset-header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+fieldset h1 {
+	font-family: var(--font-main-regular);
+}
+
+fieldset p {
+	font-family: var(--font-main-regular);
+	font-size: 0.7rem;
+	color: grey;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.form-row {
+	display: flex;
+	gap: 150px;
+	align-items: center;
+}
+
+.form-input {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+label {
+	font-family: var(--font-main-regular);
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	color: grey;
+}
+
+input {
+	padding: 4px 0px 4px 10px;
+	border-radius: 4px;
+	border: 1px solid black;
+}
+
+input:focus {
+	border: 1px solid blue;
+	outline: none;
+	box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+input:invalid {
+	border: 1px solid red;
+	outline: none;
 }
