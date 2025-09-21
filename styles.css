@@ -1,46 +1,47 @@
-/* Police 1 : Norse-bold (logo) */
+/* ---------- FONTS (paths RELATIFS à styles.css) ---------- */
+/* Utilise une seule family "Haffer" et plusieurs déclarations avec weights/styles */
+@font-face {
+	font-family: 'Haffer';
+	src: url('fonts/Haffer/Haffer/Haffer-TRIAL-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Haffer';
+	src: url('fonts/Haffer/Haffer/Haffer-TRIAL-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Haffer';
+	src: url('fonts/Haffer/Haffer/Haffer-TRIAL-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Haffer';
+	src: url('fonts/Haffer/Haffer/Haffer-TRIAL-MediumItalic.woff2') format('woff2');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Logo font (idéalement fournir woff2 également) */
 @font-face {
 	font-family: 'Norse';
-	src: url('/fonts/Norse-Bold.otf') format('opentype');
-	font-weight: bold;
+	src: url('fonts/Norse-Bold.woff2') format('woff2'), url('fonts/Norse-Bold.otf') format('opentype');
+	font-weight: 700;
 	font-style: normal;
-}
-
-/* Police : Haffer */
-/* Regular */
-@font-face {
-	font-family: 'Haffer-Regular';
-	src: url('/fonts/Haffer/Haffer/Haffer-TRIAL-Medium.woff2') format('woff2');
-	font-style: normal;
-}
-
-/* Bold */
-@font-face {
-	font-family: 'Haffer-Bold';
-	src: url('/fonts/Haffer/Haffer/Haffer-TRIAL-Bold.woff2') format('woff2');
-	font-style: bold;
-}
-
-/* Italic */
-@font-face {
-	font-family: 'Haffer-Italic';
-	src: url('/fonts/Haffer/Haffer/Haffer-TRIAL-MediumItalic.woff2') format('woff2');
-	font-style: italic;
-}
-
-/* Semi-Bold */
-@font-face {
-	font-family: 'Haffer-Semi-Bold';
-	src: url('/fonts/Haffer/Haffer/Haffer-TRIAL-SemiBold.woff2') format('woff2');
+	font-display: swap;
 }
 
 :root {
 	--button-bg: #596d48;
 	--input-border: #e5e7eb;
-	--font-main-regular: 'Haffer-Regular', sans-serif;
-	--font-main-bold: 'Haffer-Bold', sans-serif;
-	--font-main-italic: 'Haffer-Italic', sans-serif;
-	--font-main-semi-bold: 'Haffer-Semi-Bold', sans-serif;
+	--font-main: 'Haffer', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 	--font-logo: 'Norse', sans-serif;
 }
 
@@ -99,7 +100,7 @@ aside {
 
 aside p {
 	color: white;
-	font-family: var(--font-main-regular);
+	font-family: var(--font-main);
 	position: absolute;
 	bottom: 0;
 	margin-bottom: 15px;
@@ -128,7 +129,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	margin-top: 100px;
-	font-family: var(--font-main-semi-bold);
+	font-family: var(--font-main);
 	margin-left: 4rem;
 	gap: 50px;
 }
@@ -159,7 +160,7 @@ button {
 	color: white;
 	text-align: center;
 	padding: 1em 4em;
-	font-family: var(--font-main-semi-bold);
+	font-family: var(--font-main);
 	font-size: 1rem;
 	border: none;
 	border-radius: 10px;
@@ -167,7 +168,7 @@ button {
 }
 
 footer div p {
-	font-family: var(--font-main-regular);
+	font-family: var(--font-main);
 }
 
 footer div p a {
@@ -199,11 +200,11 @@ fieldset {
 }
 
 fieldset h1 {
-	font-family: var(--font-main-regular);
+	font-family: var(--font-main);
 }
 
 fieldset p {
-	font-family: var(--font-main-regular);
+	font-family: var(--font-main);
 	font-size: 0.7rem;
 	color: grey;
 }
@@ -227,7 +228,7 @@ fieldset p {
 }
 
 label {
-	font-family: var(--font-main-regular);
+	font-family: var(--font-main);
 	text-transform: uppercase;
 	font-size: 0.75rem;
 	color: grey;
