@@ -51,7 +51,7 @@
 
 /* Aside part */
 aside {
-	background-image: url('/img/bg-aside.jpg');
+	background-image: url('./img/bg-aside.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
